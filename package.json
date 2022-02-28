@@ -4,7 +4,7 @@
   "description": "A Discord Activity status showing Github, Instagram, Twitter, Facebook",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/."
   },
   "keywords": [
     "discord-rpc",
@@ -12,7 +12,6 @@
     "discord-status"
   ],
   "author": "Aquie",
-  "license": "ISC",
   "dependencies": {
     "discord-rpc": "^4.0.1"
   }

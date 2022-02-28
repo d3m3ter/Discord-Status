@@ -1,0 +1,21 @@
+{
+    "clientID": "947871613020434492",
+    "options": {
+
+        "rpc": {
+            "github": true,
+            "instagram": true,
+            "facebook": true,
+            "twitter": true,
+
+            "interval": 5000
+        },
+        "data": {
+            "github": "aquieover",
+            "instagram": "aquie.js",
+            "facebook": "facebookUser",
+            "twitter": "aquie137"
+        }
+
+    }
+}
