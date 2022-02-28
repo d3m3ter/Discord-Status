@@ -1,18 +1,33 @@
 {
   "name": "discord-status",
   "version": "1.0.0",
-  "description": "A Discord Activity status showing Github, Instagram, Twitter, Facebook",
-  "main": "index.js",
+  "description": "",
+  "main": "index.ts",
   "scripts": {
-    "start": "node ./src/."
+    "start": "ts-node ./src/."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquieover0/Discord-Status.git"
   },
   "keywords": [
     "discord-rpc",
-    "discord-activity",
-    "discord-status"
+    "discord.js",
+    "discord-status",
+    "discord-activity-status"
   ],
-  "author": "Aquie",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aquieover0/Discord-Status/issues"
+  },
+  "homepage": "https://github.com/aquieover0/Discord-Status#readme",
   "dependencies": {
-    "discord-rpc": "^4.0.1"
+    "discord-rpc": "^4.0.1",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/discord-rpc": "^4.0.0"
   }
 }
