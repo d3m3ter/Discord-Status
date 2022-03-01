@@ -60,7 +60,7 @@ export class RPC extends Client {
                     break;
             }
             i++;
-        }, 1000);
+        }, interval * 1000);
 
     }
 
