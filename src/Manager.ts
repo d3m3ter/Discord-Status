@@ -2,7 +2,6 @@ import { Presence } from "discord-rpc";
 import { data } from '../config.json';
 import fetch from 'node-fetch';
 import { InstagramUser,GithubUser, UserDatas } from "./types/types";
-import { client } from ".";
 
 export class Manager {
 
@@ -82,9 +81,36 @@ export class Manager {
         }
     }
 
-    async getTwitterUser(username:string = data.twitter) {
+    async getTwitterUser(username:string) {
         //curl "https://api.twitter.com/2/users/by/username/$USERNAME" -H "Authorization: Bearer $ACCESS_TOKEN"
+        const url:string = `https://api.twitter.com/2/users/by/username/${username}`;
+
+        const response = await fetch(url).then((res) => res.json());
+        
+        if(response.status == 401) return null;
+        
     }
+
+    async Twitter(username:string = data.twitter){
+        //const data = await this.getTwitterUser(username);
+
+        return {
+            details: `@${username}`,
+            state: `API ERROR!`,
+            largeImageKey: "twitter",
+            largeImageText: "Twitter",
+            startTimestamp: this.timestamps,
+            instance: true
+        };
+
+    }
+
+
+
+
+
+    
+    
 
     
 
