@@ -33,13 +33,12 @@ export class RPC extends Client {
                         status.push(await manager.Twitter());
                         break;
                     case "facebook":
-                        //status.push(await manager.Facebook());
+                        status.push(await manager.Facebook());
                         break;
                 }
             }
         }
         
-
         if(status.length == 0) console.error("../config.json ERROR!");
         this.setActivity(status[0]);
 
@@ -61,7 +60,7 @@ export class RPC extends Client {
                     break;
             }
             i++;
-        }, interval * 1000);
+        }, 1000);
 
     }
 

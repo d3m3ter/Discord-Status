@@ -82,7 +82,6 @@ export class Manager {
     }
 
     async getTwitterUser(username:string) {
-        //curl "https://api.twitter.com/2/users/by/username/$USERNAME" -H "Authorization: Bearer $ACCESS_TOKEN"
         const url:string = `https://api.twitter.com/2/users/by/username/${username}`;
 
         const response = await fetch(url).then((res) => res.json());
@@ -96,13 +95,22 @@ export class Manager {
 
         return {
             details: `@${username}`,
-            state: `API ERROR!`,
             largeImageKey: "twitter",
             largeImageText: "Twitter",
             startTimestamp: this.timestamps,
             instance: true
         };
+    }
 
+
+    async Facebook(username:string = data.facebook){
+        return {
+            details: `@${username}`,
+            largeImageKey: "facebook",
+            largeImageText: "Facebook",
+            startTimestamp: this.timestamps,
+            instance: true
+        };
     }
 
 
