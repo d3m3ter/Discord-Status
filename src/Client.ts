@@ -40,29 +40,15 @@ export class RPC extends Client {
         }
         
 
-        console.log(status);
         if(status.length == 0) console.error("../config.json ERROR!");
         this.setActivity(status[0]);
 
-        let i:number = 0;
+        let i:number = 1;
         setInterval(() => {
             if(i == status.length) i = 0;
-            switch(i) {
-                case 0:
-                    this.setActivity(status[0]);
-                    break;
-                case 1:
-                    this.setActivity(status[1]);
-                    break;
-                case 2:
-                    this.setActivity(status[2]);
-                    break;
-                case 3:
-                    this.setActivity(status[3]);
-                    break;
-            }
+            this.setActivity(status[i]);
             i++;
-        }, 1000);
+        }, interval * 1000);
 
     }
 
