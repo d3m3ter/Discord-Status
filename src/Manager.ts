@@ -7,12 +7,15 @@ import { client } from ".";
 export class Manager {
 
     userDatas:UserDatas;
+    timestamps:number;
 
     constructor(){
         this.userDatas = {
             instagram: null,
             github: null
         };
+
+        this.timestamps = Date.now();
     }
 
 
@@ -45,7 +48,7 @@ export class Manager {
             state: `${user.followers} Followers | ${user.following} Following`,
             largeImageKey: "instagram",
             largeImageText: "Instagram",
-            startTimestamp: Date.now(),
+            startTimestamp: this.timestamps,
             instance: true
         }
 
@@ -74,10 +77,13 @@ export class Manager {
             state: `Repositories (${user.public_repos})`,
             largeImageKey: "github",
             largeImageText: "Github",
-            startTimestamp: Date.now(),
+            startTimestamp: this.timestamps,
             instance: true
         }
+    }
 
+    async getTwitterUser(username:string = data.twitter) {
+        //curl "https://api.twitter.com/2/users/by/username/$USERNAME" -H "Authorization: Bearer $ACCESS_TOKEN"
     }
 
     
