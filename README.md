@@ -18,7 +18,8 @@
 ```
 >  Activate the application
 
-* First install the packages  `npm install`
+* First you need to install NodeJS on your computer.
+* After installing the project, install the packages `npm install`
 * Run The Application  `npm start`
 
 # 🍥 [Support Server](https://discord.com/invite/jZkYS7sT86)

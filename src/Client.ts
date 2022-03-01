@@ -39,6 +39,8 @@ export class RPC extends Client {
             }
         }
         
+
+        console.log(status);
         if(status.length == 0) console.error("../config.json ERROR!");
         this.setActivity(status[0]);
 
@@ -60,7 +62,7 @@ export class RPC extends Client {
                     break;
             }
             i++;
-        }, interval * 1000);
+        }, 1000);
 
     }
 
